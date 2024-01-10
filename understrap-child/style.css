@@ -1,0 +1,39 @@
+/*
+Theme Name: Understrap-child
+Template: understrap
+*/
+
+.block {
+    padding: 45px 0
+}
+.block__title {
+    margin-bottom: 30px;
+}
+
+.block__item {
+    padding: 20px;
+    border: 1px solid #abb8c3;
+}
+.block__item-image {
+    display: block;
+    padding-top: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.block__item-title {
+    color: #212529;
+}
+.block__item-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    object-position: center;
+    object-fit: cover;
+}
+.block__item-specifications {
+    padding: 0 0 0 25px;
+    margin: 0;
+    font-size: 14px;
+}
