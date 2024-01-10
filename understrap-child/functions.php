@@ -120,28 +120,6 @@ function rs_register_post_types() {
 	] );
 }
 
-add_filter( 'post_type_link', 'rs_type_rewrite', 1, 2 );
-function rs_type_rewrite( $permalink, $post ){
-
-	// выходим если это не наш тип записи: без холдера %faqcat%
-	if( strpos( $permalink, '%type%' ) === false ){
-		return $permalink;
-	}
-
-	// Получаем элементы таксы
-	$terms = get_the_terms( $post, 'type' );
-	// если есть элемент заменим холдер
-	if( ! is_wp_error( $terms ) && !empty( $terms ) && is_object( $terms[0] ) ){
-		$term_slug = array_pop( $terms )->slug;
-	}
-
-	else {
-		$term_slug = 'no-type';
-	}
-
-	return str_replace( '%type%', $term_slug, $permalink );
-}
-
 add_action( 'admin_init', 'rs_add_meta_boxes' );
 function rs_add_meta_boxes() {
 	add_meta_box( 'rs_add_meta_boxes', 'Города', 'rs_meta_cities', 'real-states', 'side' );
