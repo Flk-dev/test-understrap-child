@@ -3,16 +3,10 @@ Theme Name: Understrap-child
 Template: understrap
 */
 
-.block {
-    padding: 45px 0
-}
-.block__title {
-    margin-bottom: 30px;
-}
-
 .block__item {
     padding: 20px;
     border: 1px solid #abb8c3;
+    margin-bottom: 20px;
 }
 .block__item-image {
     display: block;
@@ -36,4 +30,9 @@ Template: understrap
     padding: 0 0 0 25px;
     margin: 0;
     font-size: 14px;
+}
+
+.form__message {
+    display: none;
+    margin-top: 15px;
 }
